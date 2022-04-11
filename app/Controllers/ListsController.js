@@ -44,9 +44,9 @@ export class ListsController {
       first: formElem.first.value,
       
     }
-    saveState()
+    
     listsService.addList(formData)
-
+    saveState()
     formElem.reset()
     // @ts-ignore
     bootstrap.Modal.getOrCreateInstance(document.getElementById('add-listing-modal')).hide()

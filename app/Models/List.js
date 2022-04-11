@@ -32,7 +32,7 @@ export class List {
             <form onsubmit="app.tasksController.addTask('${this.id}')">
           <div class="mb-3 p-3">
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Test..." id="task" required minlength="3" maxlength="15">
+              <input type="text" class="form-control" placeholder="Test..." id="task" required minlength="3" maxlength="50">
               <button class="btn btn-info" type="submit">add</button>
             </div>
           </div>

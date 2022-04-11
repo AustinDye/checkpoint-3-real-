@@ -4,7 +4,8 @@ export function getListform() {
       <div class="mb-3 d-flex justify-content-between">
         <div>
           <label for="title" class="form-label">Title</label>
-          <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
+          <input type="text" class="form-control" name="title" id="title"
+            required minlength="3" maxlength="15" aria-describedby="title"
             placeholder="Title..." required>
         </div>
         <div>
