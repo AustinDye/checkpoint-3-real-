@@ -8,8 +8,8 @@ class AppState extends EventEmitter {
   lists = [
     new List({
       id:'12323',
-      title: "Creg",
-      first: "bathroom",
+      title: "Chores",
+      first: "04/18/2022",
     })
   ]
   /** @type {import('./Models/Task').Task[]} */
