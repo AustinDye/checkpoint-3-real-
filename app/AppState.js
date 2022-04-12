@@ -10,6 +10,8 @@ class AppState extends EventEmitter {
       id:'12323',
       title: "Chores",
       first: "04/18/2022",
+      color:'bg-dark',
+      total: 1
     })
   ]
   /** @type {import('./Models/Task').Task[]} */

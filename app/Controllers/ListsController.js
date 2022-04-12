@@ -1,4 +1,4 @@
-//TODO draw the lists private to the controller
+
 import { ProxyState } from "../AppState.js";
 import { listsService } from "../Services/ListsServices.js";
 import { getListform } from "../Components/listForm.js";
@@ -21,6 +21,7 @@ function _drawLists(){
   `
   document.getElementById('listing-modal-form-slot').innerHTML = getListform()
   document.getElementById('add-listing-modal-label').innerText = 'Add List'
+  
 }
 
 //Public
@@ -42,6 +43,7 @@ export class ListsController {
     // @ts-ignore
       title: formElem.title.value,
       first: formElem.first.value,
+      color: formElem.color.value,
       
     }
     

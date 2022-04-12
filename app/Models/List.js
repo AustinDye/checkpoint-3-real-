@@ -2,10 +2,12 @@ import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/generateId.js"
 
 export class List {
-    constructor({id = generateId(), title,  first}){
+    constructor({id = generateId(), title,  first, color, total}){
         this.id = id
         this.title = title || ""
         this.first = first || ""
+        this.color = color
+        this.total = total
     }
 
     get Tasks() {
@@ -15,18 +17,27 @@ export class List {
       return template
     }
     
+    get Total() {
+      let tasks = ProxyState.tasks.filter(t => t.listId == this.id)
+      return this.total + tasks.length
+    }
+    
+    
     get Template(){
-        return  /*html*/`
-        <div class="col-md-4">
-          <div class="card justify-content-center" id="user-list">
-            <div class="bg-light text-center" id="user-card">
+      
+      
+      return  /*html*/`
+      <div class="col-md-4">
+          <div class="card justify-content-center " id="user-list">
+            <div class=" text-center" id="user-card">
+            <div class="container ${this.color}">
               <h2>${this.title}</h2> 
               <p>${this.first}</p>
+              <p>${this.Total}</p>
+            </div>
             <div class="task-list p-2">
               <ul>
-             
                     ${this.Tasks}
-                 
               </ul>
             </div>
             <form onsubmit="app.tasksController.addTask('${this.id}')">
@@ -42,5 +53,6 @@ export class List {
         </div>
       </div>
         `
+        
     }
 }
