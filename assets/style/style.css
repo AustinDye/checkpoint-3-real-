@@ -1,1 +1,17 @@
 /* BASIC STYLES HERE */
+header{
+    font-family: 'Bangers', cursive;
+}
+.card{
+    border-radius: 10%;
+    max-width: 80%;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: bold;
+}
+.container{
+    border-radius:10%;
+}
+.btn {
+    font-size: small;
+   
+}

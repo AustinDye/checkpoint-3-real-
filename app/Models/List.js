@@ -27,7 +27,7 @@ export class List {
       
       
       return  /*html*/`
-      <div class="col-md-4">
+      <div class="col-md-3">
           <div class="card justify-content-center " id="user-list">
             <div class=" text-center" id="user-card">
             <div class="container ${this.color}">
@@ -35,13 +35,13 @@ export class List {
               <p>${this.first}</p>
               <p>${this.Total}</p>
             </div>
-            <div class="task-list p-2">
+            <div class="task-list">
               <ul>
                     ${this.Tasks}
               </ul>
             </div>
             <form onsubmit="app.tasksController.addTask('${this.id}')">
-          <div class="mb-3 p-3">
+          <div class="mb-3">
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Test..." id="task" required minlength="3" maxlength="50">
               <button class="btn btn-info" type="submit">add</button>

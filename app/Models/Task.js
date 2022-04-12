@@ -11,7 +11,7 @@ export class Task {
     return /*html */`
         <li>
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="completeTask">
             <label class="form-check-label" for="flexCheckDefault">
                 ${this.taskN} <i class="mdi mdi-delete selectable on-hover" title="delete task" onclick="app.tasksController.deleteTask('${this.id}')"></i>
             </label>
